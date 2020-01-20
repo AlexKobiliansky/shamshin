@@ -1,0 +1,53 @@
+.catalog-item
+  margin-bottom: 190px
+  &-img
+    width: 100%
+    height: 540px
+    position: relative
+    left: 0
+    top: 0
+    overflow: hidden
+    img
+      object-fit: cover
+      width: 100%
+      height: 100%
+      transition: transform 2s ease
+    &:hover
+      img
+        //transform: scale(1.2)
+  &-name
+    font-size: 40px
+    font-weight: 900
+    margin-bottom: 65px
+  &-content
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+  &:hover
+    .catalog-item-img
+      img
+        //transform: scale(1.1)
+  .btn-wrap
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      height: 1px
+      background-color: #000
+      top: calc(50% - 0.5px)
+  &:nth-child(odd)
+    .btn-wrap
+      &:before
+        left: 300px
+        width: calc(100% - 300px + ((100vw - 1650px)/2))
+  &:nth-child(even)
+    .row
+      flex-direction: row-reverse
+    .btn-wrap
+      &:before
+        width: calc(20% + ((1920px - 1650px)/2))
+        right: calc(100% + 50px)
+
+
+

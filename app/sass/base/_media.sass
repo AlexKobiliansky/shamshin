@@ -3,17 +3,206 @@
 
 /*==========  Desktop First  ==========*/
 
+@media (max-width: 1400px)
+
+  .catalog-item
+    margin-bottom: 100px
+    &-name
+      font-size: 36px
+
+  .bottom-line
+    padding-bottom: 60px
+
+  .top-line
+    padding: 40px 0
+
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .catalog-item
+    &-img
+      height: 400px
+    &-name
+      font-size: 28px
+      margin-bottom: 45px
+    &:nth-child(odd)
+      .btn-wrap:before
+        width: calc(100% - 275px + ((100vw - 930px)/2))
+        left: 275px
+
+  .bottom-line
+    padding: 75px 0
+    align-items: flex-start
+    &:before
+      display: none
+
+  .intro-name
+    font-size: 46px
+
+  .intro-chars
+    font-size: 28px
+    .char
+      margin-bottom: 10px
+
+  .intro-phone
+    font-size: 34px
+
+  .intro-slider-wrap
+    max-width: 100%!important
+    padding: 0!important
+
+  .intro-slider
+    width: 100%
+    height: 300px
 
 // ≥992px
 +media-breakpoint-down(md)
 
+  .btn
+    width: 180px
+    height: 50px
+    &:after
+      font-size: 18px
+      padding: 0 20px
+      line-height: 50px
+    span
+      font-size: 24px
+      line-height: 50px
+
+  .catalog-item
+    margin-bottom: 75px
+    &-img
+      height: 350px
+    &-name
+      font-size: 24px
+    &:nth-child(odd)
+      .btn-wrap:before
+        width: calc(100% - 210px + ((100vw - 690px)/2))
+        left: 210px
+    &:nth-child(even)
+      .btn-wrap:before
+        right: calc(100% + 25px)
+
+  .intro-name
+    font-size: 40px
+
+  .intro-chars
+    font-size: 21px
+
+  .intro-phone
+    font-size: 21px
+    margin-bottom: 20px
+
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .catalog-item
+    &-img
+      height: 300px
+      margin-bottom: 30px
+    &-name
+      margin-bottom: 30px
+    &:nth-child(odd)
+      .btn-wrap:before
+        width: calc(100% - 210px + ((100vw - 530px)/2))
+    &:nth-child(even)
+      .btn-wrap
+        text-align: right
+        &:before
+          width: calc(100% - 210px + ((100vw - 530px)/2))
+          right: 210px
+
+
+  .bottom-line
+    flex-wrap: wrap
+    &-item
+      //width: 50%
+      &:nth-child(3)
+        width: 100%
+  .intro-name
+    flex-grow: 2
+
+  .intro-chars
+    flex-grow: 1
+
+  .intro-contacts
+    margin-top: 30px
+    display: flex
+    justify-content: space-between
+
+
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .catalog-item
+    &:nth-child(odd)
+      .btn-wrap:before
+        width: calc(100% - 210px + 15px)
+    &:nth-child(even)
+      .btn-wrap:before
+        width: calc(100% - 210px + 15px)
+
+  .bottom-line
+    padding: 40px 0
+
+  .soc-item
+    width: 28px
+    height: 28px
+    margin-right: 10px
+    .svg
+      width: 14px
+    &:last-child
+      margin-right: 0
+
+  .intro-slider
+    height: 240px
+    span
+      font-size: 30px
+      bottom: -5px
+      left: -3px
+
+  .top-line
+    .name
+      font-size: 24px
+      line-height: 56px
+    .btn
+      width: 150px
+      height: 56px
+      &:after
+        font-size: 16px
+        padding: 0 20px
+        line-height: 56px
+      span
+        font-size: 24px
+        line-height: 56px
+
+@media (max-width: 390px)
+
+  .catalog-item
+    &-img
+      margin-bottom: 20px
+      height: 240px
+    &-name
+      font-size: 20px
+      margin-bottom: 20px
+
+  .bottom-line-item
+    width: 100%
+    text-align: center
+    margin-bottom: 30px
+    margin-top: 0
+
+  .intro-contacts
+    flex-direction: column
+
+  .intro-socials
+    justify-content: center
+    flex-wrap: wrap
+    span
+      width: 100%
+      margin-right: 0
+      margin-bottom: 10px
+
 
 
 /*==========  Mobile First  ==========*/
