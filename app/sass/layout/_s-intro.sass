@@ -1,0 +1,87 @@
+.top-line
+  line-height: 1
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 80px 0
+  .name
+    font-size: 30px
+    margin-bottom: 0
+
+.intro-slider
+  position: relative
+  height: 350px
+  +bg-cover
+  background-image: url('../img/intro-img-0.jpg')
+  width: calc(100% + ((1920px - 1650px)/2))
+  span
+    font-size: 57px
+    line-height: 1
+    font-weight: 900
+    color: #f9f9f9
+    left: -4px
+    bottom: -9px
+    position: absolute
+    text-transform: uppercase
+
+.bottom-line
+  padding: 100px 0 150px 140px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: relative
+  span
+    display: block
+    font-size: 10px
+    font-weight: 300
+    text-transform: uppercase
+    line-height: 1
+    margin-bottom: 10px
+  &:before
+    content: ''
+    position: absolute
+    height: 1px
+    width: calc(90px + ((1920px - 1650px)/2))
+    left: calc(0px - (1920px - 1650px)/2)
+    background-color: #000
+    top: 195px
+
+.intro-name
+  font-size: 55px
+  font-weight: 900
+  line-height: 1.2
+
+.intro-chars
+  font-size: 30px
+  font-weight: 700
+  .char
+    margin-bottom: 20px
+
+.intro-phone
+  font-size: 40px
+  font-weight: 900
+  margin-bottom: 25px
+  a
+    color: #000
+
+.intro-socials
+  display: flex
+  align-items: center
+  span
+    margin-right: 20px
+    margin-bottom: 0
+
+
+.soc-item
+  display: flex
+  width: 36px
+  height: 36px
+  align-items: center
+  justify-content: center
+  background-color: #000
+  margin-right: 20px
+  .svg
+    width: 20px
+    height: auto
+    fill: #fff
+
