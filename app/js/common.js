@@ -32,6 +32,20 @@ $(document).ready(function(){
         }, 'xml');
     });
 
+    $('.preloader').fadeOut();
+
+    $("a[href='#popup-form']").magnificPopup({
+        type: "inline",
+        fixedContentPos: !1,
+        fixedBgPos: !0,
+        overflowY: "auto",
+        closeBtnInside: !0,
+        preloader: !1,
+        midClick: !0,
+        removalDelay: 300,
+        mainClass: "my-mfp-zoom-in",
+    });
+
 
     $('section.s-intro').on("mousemove", function (e) {
         if ($(window).width() > 1023) {
@@ -67,13 +81,20 @@ $(document).ready(function(){
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
+        var t = th.find(".btn").text();
+        th.find(".btn").prop("disabled", "disabled").attr("data-text", "Отправлено!").find('span').text("Отправлено!");
+        console.log('sd');
 
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
         }).done(function() {
-
+            setTimeout(function() {
+                th.find(".btn").removeAttr('disabled').removeClass("disabled").attr("data-text", t).find('span').text(t);
+                th.trigger("reset");
+                $.magnificPopup.close();
+            }, 2000);
         });
         return false;
     });

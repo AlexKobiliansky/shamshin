@@ -27,13 +27,26 @@
 </head>
 
 <body>
-
+<!-- preloader -->
+<div class="preloader">
+	<div id="cube-loader">
+		<div class="caption">
+			<div class="cube-loader">
+				<div class="cube loader-1"></div>
+				<div class="cube loader-2"></div>
+				<div class="cube loader-4"></div>
+				<div class="cube loader-3"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /preloader -->
 <!-- ======= SECTION INTRO START ======= -->
 <section class="s-intro">
 	<div class="container">
 		<div class="top-line">
 			<h1 class="name">Shamshin.</h1>
-			<a href="#0" class="btn" data-text="Связаться."><span>Связаться.</span></a>
+			<a href="#popup-form" class="btn" data-text="Связаться."><span>Связаться.</span></a>
 		</div>
 	</div>
 	<div class="container intro-slider-wrap">
@@ -218,6 +231,40 @@
 	<span>&copy; 2020 Shamshin</span>
 </footer>
 <!-- ======= FOOTER END ======= -->
+
+<div class="hidden">
+	<form class="contact-form popup-form" id="popup-form">
+
+		<!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="Shamshin">
+		<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+		<input type="hidden" name="form_subject" value="Заявка с сайта Shamshin">
+		<!-- END Hidden Required Fields -->
+
+		<h3>Оставьте заявку</h3>
+		<p>Я свяжусь с Вами в ближайшее время</p>
+
+
+		<div class="form-labels-wrap">
+
+			<label>
+				<input type="text" placeholder="Имя" name="Имя" autocomplete="off" data-validation="custom"
+					   data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,20}$"
+					   data-validation-error-msg="* Укажите ваше имя">
+			</label>
+
+			<label>
+				<input type="text" class="user-phone" name="Телефон" placeholder="Телефон"
+					   autocomplete="off" data-validation="custom"
+					   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"
+					   data-validation-error-msg="* Укажите ваш телефон">
+			</label>
+			<div class="btn-wrap">
+				<button type="submit" class="btn" data-text="Отправить"><span>Отправить</span></button>
+			</div>
+		</div>
+	</form>
+</div>
 
 <script src="js/scripts.min.js"></script>
 

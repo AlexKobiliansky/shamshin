@@ -115,3 +115,105 @@ ul
     +mt(.5s)
     transform: translateX(-101%)
     text-transform: uppercase
+
+//preloader
+.preloader
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 1000
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #fff
+
+#cube-loader
+  align-items: center
+  display: flex
+  height: 100%
+  width: 100%
+  position: fixed
+  & .caption
+    margin: 0 auto
+  .cube-loader
+    width: 73px
+    height: 73px
+    margin: 0 auto
+    margin-top: 49px
+    position: relative
+    transform: rotateZ(45deg)
+    & .cube
+      position: relative
+      transform: rotateZ(45deg)
+      width: 50%
+      height: 50%
+      float: left
+      transform: scale(1.1)
+
+    & .cube:before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: #000
+      animation: cube-loader 2.76s infinite linear both
+      transform-origin: 100% 100%
+
+    & .loader-2
+      transform: scale(1.1) rotateZ(90deg)
+
+    & .loader-3
+      transform: scale(1.1) rotateZ(180deg)
+
+    & .loader-4
+      transform: scale(1.1) rotateZ(270deg)
+
+    & .loader-2:before
+      animation-delay: 0.35s
+
+    & .loader-3:before
+      animation-delay: 0.69s
+
+    & .loader-4:before
+      animation-delay: 1.04s
+
+@keyframes cube-loader
+  0%, 10%
+    transform: perspective(136px) rotateX(-180deg)
+    opacity: 0
+
+  25%, 75%
+    transform: perspective(136px) rotateX(0deg)
+    opacity: 1
+
+  90%, 100%
+    transform: perspective(136px) rotateY(180deg)
+    opacity: 0
+
+//end preloader
+
+//MY_MFP_ZOOM_IN
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .9
+  &.mfp-removing.mfp-bg
+    opacity: 0
