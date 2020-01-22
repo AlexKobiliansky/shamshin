@@ -5,6 +5,21 @@
 
 @media (max-width: 1400px)
 
+  .gallery-item
+    height: 400px
+    &:nth-child(8n+1)
+      height: 500px
+    &:nth-child(8n+2)
+      height: 500px
+    &:nth-child(8n+3)
+      height: 500px
+    &:nth-child(8n+4)
+      height: 500px
+    &:nth-child(8n+5)
+      height: 800px
+    &:nth-child(8n+6)
+      height: 800px
+
   .s-contacts
     h3
       font-size: 40px
@@ -25,6 +40,20 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .gallery-item
+    &:nth-child(8n+1)
+      width: calc(65% - 10px)
+    &:nth-child(8n+2)
+      width: calc(35% - 10px)
+    &:nth-child(8n+3)
+      width: calc(35% - 10px)
+    &:nth-child(8n+4)
+      width: calc(65% - 10px)
+    &:nth-child(8n+5)
+      height: 700px
+    &:nth-child(8n+6)
+      height: 700px
 
   .s-contacts
     h3
@@ -68,6 +97,21 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .gallery-item
+    height: 250px
+    &:nth-child(8n+1)
+      height: 350px
+    &:nth-child(8n+2)
+      height: 350px
+    &:nth-child(8n+3)
+      height: 350px
+    &:nth-child(8n+4)
+      height: 350px
+    &:nth-child(8n+5)
+      height: 500px
+    &:nth-child(8n+6)
+      height: 500px
 
   .s-contacts .btn span
     font-size: 24px
@@ -132,6 +176,29 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .gallery-item
+    height: 200px
+    margin-bottom: 10px
+    width: calc(50% - 5px)
+    &:nth-child(8n+1)
+      height: 300px
+      width: calc(65% - 5px)
+    &:nth-child(8n+2)
+      height: 300px
+      width: calc(35% - 5px)
+    &:nth-child(8n+3)
+      height: 300px
+      width: calc(35% - 5px)
+    &:nth-child(8n+4)
+      height: 300px
+      width: calc(65% - 5px)
+    &:nth-child(8n+5)
+      height: 350px
+      width: calc(50% - 5px)
+    &:nth-child(8n+6)
+      height: 350px
+      width: calc(50% - 5px)
+
   .s-contacts
     text-align: center
 
@@ -189,6 +256,21 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .gallery-item
+    height: 160px
+    &:nth-child(8n+1)
+      height: 200px
+    &:nth-child(8n+2)
+      height: 200px
+    &:nth-child(8n+3)
+      height: 200px
+    &:nth-child(8n+4)
+      height: 200px
+    &:nth-child(8n+5)
+      height: 300px
+    &:nth-child(8n+6)
+      height: 300px
+
   .main-foot
     padding: 25px 0
     font-size: 16px
@@ -236,6 +318,21 @@
         line-height: 56px
 
 @media (max-width: 390px)
+
+  .gallery-item
+    height: 120px
+    &:nth-child(8n+1)
+      height: 160px
+    &:nth-child(8n+2)
+      height: 160px
+    &:nth-child(8n+3)
+      height: 160px
+    &:nth-child(8n+4)
+      height: 160px
+    &:nth-child(8n+5)
+      height: 200px
+    &:nth-child(8n+6)
+      height: 200px
 
   .popup-form
     padding: 35px 25px

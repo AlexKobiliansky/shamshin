@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    $('.lazy').lazy();
+
     $('img.svg').each(function(){
         var $img = jQuery(this);
         var imgID = $img.attr('id');
@@ -30,6 +32,50 @@ $(document).ready(function(){
             // Replace image with new SVG
             $img.replaceWith($svg);
         }, 'xml');
+    });
+
+    // $('.gallery-wrap').magnificPopup({
+    //     delegate: 'a',
+    //     type: 'image',
+    //     tLoading: 'Loading image #%curr%...',
+    //     mainClass: 'mfp-img-mobile',
+    //     gallery: {
+    //         enabled: true,
+    //         navigateByImgClick: true,
+    //         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    //     },
+    // });
+
+    $('.gallery-wrap').magnificPopup({
+        mainClass: 'mfp-zoom-in',
+        delegate: 'a',
+        type: 'image',
+        tLoading: '',
+        gallery:{
+            enabled:true,
+        },
+        removalDelay: 300,
+        callbacks: {
+            beforeChange: function() {
+                this.items[0].src = this.items[0].src + '?=' + Math.random();
+            },
+            open: function() {
+                $.magnificPopup.instance.next = function() {
+                    var self = this;
+                    self.wrap.removeClass('mfp-image-loaded');
+                    setTimeout(function() { $.magnificPopup.proto.next.call(self); }, 120);
+                }
+                $.magnificPopup.instance.prev = function() {
+                    var self = this;
+                    self.wrap.removeClass('mfp-image-loaded');
+                    setTimeout(function() { $.magnificPopup.proto.prev.call(self); }, 120);
+                }
+            },
+            imageLoadComplete: function() {
+                var self = this;
+                setTimeout(function() { self.wrap.addClass('mfp-image-loaded'); }, 16);
+            }
+        }
     });
 
     $('.preloader').fadeOut();
@@ -98,6 +144,8 @@ $(document).ready(function(){
         });
         return false;
     });
+
+
 
     /** PARALLAX START */
     function myPar(){
